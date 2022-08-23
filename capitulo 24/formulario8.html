@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action=" " method="get" autocomplete="on">
+        <p>
+            <label for="in1">1º Número:</label>
+            <input type="number" name="in1" id="in1" min="0" max="50" required
+            oninput="isoma.innerHTML = Number(in1.value)+ Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">2º Número:</label>
+            <input type="number" name="in2" id="in2"  min="0" max="50" required
+            oninput="isoma.innerHTML = Number(in1.value)+ Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="isoma" id="isoma">0</output>
+        </p>
+        <p>
+            <label for="medida">medida:</label>
+            <input type="range" name="medida" id="medida" value="0" min="0" max="5"
+            oninput="medval.innerHTML = Number(medida.value)">
+            <output id="medval">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <input type="number" name="conta" id="conta" oninput="contar()">
+        <output id="resposta">15</output>
+        <output id="res">16</output>
+    </form>
+    <script>
+        var resposta = document.getElementById("resposta")
+        var res = document.getElementById("res")
+        var num = document.getElementById("conta")
+        function contar(){
+            if(num.value == 15){
+                resposta.style.backgroundColor = "green"
+            }else{
+                resposta.style.backgroundColor = "red"
+            }
+            contar2()
+        }
+        function contar2(){
+            if(num.value == 16){
+                res.style.backgroundColor = "green"
+            }else{
+                res.style.backgroundColor = "red"
+            }
+        }
+    </script>
+</body>
+</html>
