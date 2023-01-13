@@ -1,0 +1,62 @@
+:root{
+    /* Cores */
+    --verde:#49a09d;
+    --lilas:#5f2c82;
+}
+
+/* Tablet */
+@media screen and (min-width:768px){
+    body{
+        background-image: linear-gradient(to bottom ,var(--lilas) ,var(--verde));
+    }
+    
+    main{
+        width: 500px;
+        height: 300px;
+        
+        display: flex;
+    }
+
+    div#imagem{
+        background: url(../img_login.jpg) no-repeat center ;
+        background-size: cover;
+        
+        
+        height: 100%;
+        width: 100%;
+        border-radius: 15px 0px 0px 15px;
+    }
+
+    div#formulario{
+        font-size: 1.1em;
+    }
+}
+
+/* Telas Grandes */
+@media screen and (min-width:1080px){
+    main{
+        flex-direction: row-reverse;
+        width: 880px;
+        height: 400px;
+    }
+    div#imagem{
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    div#formulario{
+        font-size: 1.3em;
+    }
+    
+    input[type = email],input[type = password]{
+        height: 3em;
+    }
+    
+    .emailSenha{
+        padding: 6px;
+    }
+
+    input[type=submit] , button{
+        padding: 15px;
+        margin-top: 15px;
+    }
+}

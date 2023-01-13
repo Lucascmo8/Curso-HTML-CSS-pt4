@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+:root{
+    /* Cores */
+    --verde:#49a09d;
+    --lilas:#5f2c82;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body,html{
+    height: 100%;
+}
+
+body{
+    background-color: var(--lilas);
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: white;
+
+    width: 250px;
+    height: 500px;
+
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+
+    transition: width .5s,height .5s;
+    transition-timing-function: ease;
+}
+
+
+div#imagem{
+    background: url(../img_login.jpg) no-repeat center ;
+    background-size: cover;
+    display: block;
+    
+    
+    height: 40%;
+    width: 100%;
+    border: none;
+    
+}
+
+/*  Form*/
+
+div#formulario{
+    padding: 10px;
+}
+
+div#formulario > h1{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+div#formulario > p{
+    margin-bottom: 5px;
+}
+
+label{
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    color: white;
+    align-self: center;
+}
+
+.emailSenha{
+    background-color: #5f2c82;
+    padding: 3px;
+    border-radius: 5px;
+    
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.emailSenha > input{
+    width: calc(100% - 50px);
+    height: 24px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 3px;
+}
+
+.emailSenha > input:focus ,.emailSenha > input:hover{
+    outline: none;
+    background-color: var(--verde);
+    color: white;
+}
+
+input[type=submit] , button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    border: 1px solid var(--verde);
+}
+
+
+input[type = submit]{
+    background-color: var(--verde);
+    color: white;
+}
+
+input[type=submit]:hover ,input[type=submit]:focus,button:hover,button:focus{
+    outline: none;
+    background-color: #2d6361;
+    color:white;
+    transition: .5s;
+}
